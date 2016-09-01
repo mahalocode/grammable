@@ -1,10 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe GramsController, type: :controller do
-	describe "grams#index action" do
-		 it "should successfully show the page" do
-           get :index
-           expect(response).to have_http_status(:success)
+	describe "grams#edit" do
+		 it "should successfully show the edit form if thefram is found" do
+           
+    end
+
+    it  "should return a 404 eror message if the fram is not found" do
+
     end
   end
 
