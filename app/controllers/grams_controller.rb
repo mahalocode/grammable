@@ -11,22 +11,24 @@ class GramsController < ApplicationController
 		 @gram = Gram.find_by_id(params[:id])
 	     return render_not_found if @gram.blank?
     end
- end
+ 
 
     def edit
 		@gram = Gram.find_by_id(params[:id])
 		return render_not_found if @gram.blank?
     end
 
-	def create
+	 def create
 
        @gram =Gram.create(gram_params.merge(user: current_user))
        if @gram.valid?
        redirect_to root_path
        else
    	   render :new, status: :unprocessable_entity
-	end
-end
+	 end
+    end
+ end
+    
 
 private
 
@@ -37,7 +39,7 @@ private
 	def render_not_found
 		render text: 'Not Found :(', status: :not_found
     end
-
+  
 
 	
 
