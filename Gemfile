@@ -4,13 +4,15 @@ group :development, :test do
 	gem "factory_girl_rails", "~> 4.0"
 end
 
+gem 'fog'
+gem 'carrierwave'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
 gem 'simple_form'
 # Use postgresql as the database for Active Record
 gem 'pg'
-
+gem 'figaro'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
